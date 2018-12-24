@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-md-3">
+        <p class="lead">Отделы</p>
+        <div class="list-group">
+            {% for cat in nav %}
+                <a href="{{ cat.get_absolute_url }}" class="list-group-item">{{ cat.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+<div class="col-sm-12">
+<h2>{{ cats.name }}</h2>
+<hr>
+    {% for person in person_in_category %}
+<div class="col-sm-4">
+    <img src="{{ person.user.passport.url }}" alt="" style="width: 250px; height:250px">
+<h4 class="text-center">{{ person.user.surname }} {{ person.user.name }}</h4>
+    <h4 class="text-center">{{ person.position }}</h4>
+<p class="text-center">Оклад {{ person.price }}</p>
+    <p class="text-center">  <a href="#" class="text-center"><button class="btn btn-danger">Просмотреть профиль</button></a></p>
+</div>{% endfor %}
+</div>
+{% endblock content %}
