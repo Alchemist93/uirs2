@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Project Nova</title>
+      <meta charset="utf-8">
+      <meta name="keywords" content="Ключивые,слова,для,поиска">
+      <meta name="description" content="Краткое описание для поисковиков">
+      <link rel="stylesheet" href="{% static "css/style.css" %}">
+      <link rel="stylesheet" href="{% static "css/lightbox.css" %}">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <div class="inner_header">
+          <div class="logo_container">
+            <h1>Детальная информация <span></span></h1>
+          </div>
+          <ul class="navigation">
+              {% for cat in nav %}
+                  <a href="{{ cat.get_absolute_url }}"><li>{{ cat.name }}</li></a>
+              {% endfor %}
+          </ul>
+        </div>
+        <div class="main">
+        <div class="box_1">
+          <div class="box1">
+          <h3>Сотрудник</h3><hr>
+          <div class="imag">
+            <img class="imag1" src="{{ personal.passport.url }}">
+            <h4>{{ personal.surname }} {{ personal.name }}</h4><br>
+            <p class="p-tx">{{ position.position }}</p>
+          </div>
+          </div>
+        </div>
+        <div class="box_2">
+          <div class="box2">
+          <h3>Данные сотрудника</h3><hr>
+          <div class="table1">
+            <table class="simple-little-table" cellspacing='0'>
+              <tr>
+                <td>Должность:</td>
+                <td>{{ position.position }} </td>
+              </tr>
+              <tr>
+                <td>Отдел:</td>
+                <td>{{ position.depart }}</td>
+              </tr>
+              <tr>
+                <td>Сотрудник:</td>
+                <td>{{ personal.surname }} {{ personal.name }} {{ personal.patronymic }}</td>
+              </tr>
+              <tr>
+                <td>Дата приема:</td>
+                <td>{{ position.date }} </td>
+              </tr>
+              <tr>
+                <td>Оклад:</td>
+                <td>{{ position.price }} сум</td>
+              </tr>
+            </table>
+          </div>
+          </div>
+        </div>
+        </div>
+        <div class="footer">
+            <a href="{{ personal.passport.url }}" data-lightbox="image-1" data-title="My caption">
+            <img src="{{ personal.passport.url }}" alt="" class="image1">
+            </a>
+            <a href="{{ personal.registration.url }}" data-lightbox="image-1" data-title="My caption">
+            <img src="{{ personal.registration.url }}" alt=""  class="image2">
+            </a>
+            <a href="{{ personal.inn.url }}" data-lightbox="image-1" data-title="My caption">
+            <img src="{{ personal.inn.url }}" alt="" class="image3">
+            </a>
+            <a href="{{ personal.inps.url }}" data-lightbox="image-1" data-title="My caption">
+            <img src="{{ personal.inps.url }}" alt="" class="image4">
+            </a>
+            <a href="image/doc5.jpg" data-lightbox="image-1" data-title="My caption">
+            <img src="image/doc5.jpg" alt="" class="image5">
+            </a>
+      </div>
+      </div>
+
+
+      <script src="{% static "js/lightbox.js" %}"></script>
+  </body>
+</html>

@@ -23,7 +23,6 @@ def category_view(request, category_slug):
     category = Category.objects.get(slug=category_slug)
     nav = Category.objects.all()
     person_in_category = Position.objects.filter(depart=category)
-    #print(Position.depart)
     context = {
         'nav': nav,
         'cats': category,
@@ -31,3 +30,15 @@ def category_view(request, category_slug):
 
     }
     return render(request, 'category.html', context)
+
+
+def personal_view(request, personal_slug):
+    personal = Employee.objects.get(slug=personal_slug)
+    position = Position.objects.get(user=personal)
+    nav = Category.objects.all()
+    context = {
+        'personal': personal,
+        'nav': nav,
+        'position': position,
+    }
+    return render(request, 'employee.html', context)

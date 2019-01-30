@@ -18,7 +18,7 @@
 <h4 class="text-center">{{ person.user.surname }} {{ person.user.name }}</h4>
     <h4 class="text-center">{{ person.position }}</h4>
 <p class="text-center">Оклад {{ person.price }}</p>
-    <p class="text-center">  <a href="#" class="text-center"><button class="btn btn-danger">Просмотреть профиль</button></a></p>
+    <p class="text-center">  <a href="{{ person.user.get_absolute_url }}" class="text-center"><button class="btn btn-danger">Просмотреть профиль</button></a></p>
 </div>{% endfor %}
 </div>
 {% endblock content %}

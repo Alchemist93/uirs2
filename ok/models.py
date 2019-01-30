@@ -53,6 +53,9 @@ class Employee(models.Model):
     def __str__(self):
         return str(self.surname + ' ' + self.name + ' ' + self.patronymic)
 
+    def get_absolute_url(self):
+        return reverse('personal_detail', kwargs={'personal_slug': self.slug})
+
     class Meta:
         verbose_name = 'Личные данные сотрудника'
         verbose_name_plural = 'Личные данные сотрудников'
@@ -81,7 +84,7 @@ class Position(models.Model):
     depart = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Отдел')
     user = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name='Сотрудник')
     date = models.DateField(verbose_name='Дата приема')
-    price = models.DecimalField(max_digits=20, verbose_name='Оклад', decimal_places=4)
+    price = models.DecimalField(max_digits=20, verbose_name='Оклад', decimal_places=2)
     slug = models.SlugField(blank=True)
 
     def __str__(self):
