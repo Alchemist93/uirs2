@@ -12,18 +12,14 @@
 <div class="col-sm-12">
 <h2>{{ cats.name }}</h2>
 <hr>
-    <h1>Личные данные сотрудника</h1>
+    <h1>Должность сотрудника</h1>
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
 
-      фамилия  {{ form.surname }}
-        имя {{ form.name }}
-        Отчество {{ form.patronymic }}
-        дата рождения {{ form.birth_day }}
-        гражданство {{ form.citizenship }}
-       паспорт {{ form.passport }} {{ form.passport_file }}
-        инн {{ form.inn }} {{ form.inn_file }}
-        инпс {{ form.inps }} {{ form.inps_file }}
-        скан прописки {{ form.registration }} {{ form.registration_file }}
+      Должность  {{ form.position }}
+        Отдел {{ form.depart }}
+        Сотрудник {{ form.user }}
+        Дата приема {{ form.date }}
+        Оклад {{ form.price }}
         <button type="submit" class="save btn btn-default">Сохранить</button>
     </form>
 </div>
