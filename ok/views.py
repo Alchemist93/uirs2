@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from ok.models import Employee, Citizen, Category, Position
+from ok.models import Employee, Citizen, Category, Position, Vacation
 from django.views.generic import DetailView
 from .forms import EmployeeForm, PositionForm, AddCategory
 
@@ -37,10 +37,12 @@ def personal_view(request, personal_slug):
     personal = Employee.objects.get(slug=personal_slug)
     position = Position.objects.get(user=personal)
     nav = Category.objects.all()
+    vacation = Vacation.objects.filter(user=personal)
     context = {
         'personal': personal,
         'nav': nav,
         'position': position,
+        'vacation': vacation
     }
     return render(request, 'employee.html', context)
 

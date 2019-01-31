@@ -102,3 +102,16 @@ def pre_save_pos(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(pre_save_pos, sender=Position)
+
+
+class Vacation(models.Model):
+    user = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name='сотрудник')
+    start_vacation = models.DateField(verbose_name='начало отпуска')
+    end_vacation = models.DateField(verbose_name='Конец отпуска')
+
+    def __str__(self):
+        return (str(self.user) + str(self.start_vacation) + str(self.end_vacation))
+
+    class Meta:
+        verbose_name = 'Отпуск'
+        verbose_name_plural = 'Отпуска'

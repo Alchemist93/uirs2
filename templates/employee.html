@@ -31,6 +31,11 @@
             <img class="imag1" src="{{ personal.passport.url }}">
             <h4>{{ personal.surname }} {{ personal.name }}</h4><br>
             <p class="p-tx">{{ position.position }}</p>
+              <p class="p-tx">
+              {% for v in vacation %}
+              {{ v.start_vacation }} - {{ v.end_vacation }}<br>
+              {% endfor %}
+              </p>
           </div>
           </div>
         </div>
