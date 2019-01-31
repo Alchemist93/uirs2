@@ -47,9 +47,13 @@ def personal_view(request, personal_slug):
 
 def new_employee(request):
     if request.method == 'POST':
-        form = EmployeeForm(request.POST)
+        form = EmployeeForm(request.POST, request.FILES)
+        print(request.POST)
+        print(form.is_valid())
         if form.is_valid():
             form.save()
+        else:
+            print(form.errors)
     else:
         form = EmployeeForm()
     context = {

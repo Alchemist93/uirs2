@@ -6,8 +6,5 @@ class EmployeeForm(forms.ModelForm):
 
     class Meta:
         model = Employee
-        fields = ('surname', 'name', 'patronymic', 'birth_day', 'passport', 'registration', 'citizenship', 'inn', 'inps')
+        fields = ('surname', 'name', 'patronymic', 'birth_day',  'citizenship', 'passport',  'inn', 'inps', 'registration',)
 
-    def save(self):
-        obj = super(EmployeeForm, self).save(commit=False)
-        return obj.save()
