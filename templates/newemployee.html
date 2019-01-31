@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-md-3">
+        <p class="lead">Отделы</p>
+        <div class="list-group">
+            {% for cat in nav %}
+                <a href="{{ cat.get_absolute_url }}" class="list-group-item">{{ cat.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+<div class="col-sm-12">
+<h2>{{ cats.name }}</h2>
+<hr>
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
+{% endblock content %}

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ok.views import base_view, category_view, personal_view
+from ok.views import base_view, category_view, personal_view, new_employee
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base_view, name='base'),
+    path('newemployee/', new_employee, name='new_employee'),
     path('category/<slug:category_slug>/', category_view, name='category_detail'),
     path('personal/<slug:personal_slug>', personal_view, name='personal_detail'),
 ]

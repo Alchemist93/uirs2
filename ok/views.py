@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from ok.models import Employee, Citizen, Category, Position
 from django.views.generic import DetailView
+from .forms import EmployeeForm
 
 # Create your views here.
 
@@ -42,3 +43,16 @@ def personal_view(request, personal_slug):
         'position': position,
     }
     return render(request, 'employee.html', context)
+
+
+def new_employee(request):
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = EmployeeForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'newemployee.html', context)
