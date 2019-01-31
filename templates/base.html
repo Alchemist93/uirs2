@@ -13,10 +13,10 @@
     <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel='stylesheet' href='{% static "css/bootstrap.css" %}'>
+    <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}'>
 
     <!-- Custom CSS -->
-    <link rel='stylesheet' href='{% static "css/shop-homepage.css" %}'>
+    <link rel='stylesheet' href='{% static 'css/shop-homepage.css' %}'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,8 +72,16 @@
                     {% for cat in category %}
                     <a href="{{ cat.get_absolute_url }}" class="list-group-item">{{ cat.name }}</a>
                     {% endfor %}
+                    <p class="lead">Работа с сотрудниками</p>
+                    <div class="list-group">
+
+                        <a href="{% url 'new_employee' %}" class="list-group-item">Личн. данные</a>
+                        <a href="{% url 'new_position' %}" class="list-group-item">Назнач. должность</a>
+                        <a href="{% url 'new_category' %}" class="list-group-item">Новый отдел</a>
+                    </div>
                 </div>
             </div>
+
 
             <div class="col-md-9">
 

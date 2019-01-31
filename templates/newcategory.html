@@ -20,22 +20,14 @@
 <div class="col-sm-12">
 <h2>{{ cats.name }}</h2>
 <hr>
-    <h1>Личные данные сотрудника</h1>
+    <h1>Добавление отдела</h1>
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
 
-      фамилия  {{ form.surname }}
-        имя {{ form.name }}
-        Отчество {{ form.patronymic }}
-        дата рождения {{ form.birth_day }}
-        гражданство {{ form.citizenship }}
-       паспорт {{ form.passport }} {{ form.passport_file }}
-        инн {{ form.inn }} {{ form.inn_file }}
-        инпс {{ form.inps }} {{ form.inps_file }}
-        скан прописки {{ form.registration }} {{ form.registration_file }}
+      Отдел  {{ form.name }}
+
         <button type="submit" class="save btn btn-default">Сохранить</button>
     </form>
 </div>
-    <a href="/newposition/" class="list-group-item">new position</a>
+    <a href="/newemployee/" class="list-group-item">new employee</a>
     </div>
-
 {% endblock content %}
