@@ -1,21 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="col-md-3">
-        <p class="lead">Отделы</p>
-        <div class="list-group">
-            {% for cat in nav %}
-                <a href="{{ cat.get_absolute_url }}" class="list-group-item">{{ cat.name }}</a>
-            {% endfor %}
-        </div>
-        <p class="lead">Работа с сотрудниками</p>
-        <div class="list-group">
 
-            <a href="{% url 'new_employee' %}" class="list-group-item">Личн. данные</a>
-            <a href="{% url 'new_position' %}" class="list-group-item">Назнач. должность</a>
-            <a href="{% url 'new_category' %}" class="list-group-item">Новый отдел</a>
-        </div>
-    </div>
     <div class="col-md-9">
 <div class="col-sm-12">
 <h2>{{ cats.name }}</h2>

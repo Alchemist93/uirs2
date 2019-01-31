@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from ok.models import Employee, Citizen, Category, Position, Vacation
 from django.views.generic import DetailView
-from .forms import EmployeeForm, PositionForm, AddCategory
+from .forms import EmployeeForm, PositionForm, AddCategory, AddVacation
 
 # Create your views here.
 
@@ -102,4 +102,23 @@ def new_category(request):
         'nav': nav
     }
     return render(request, 'newcategory.html', context)
+
+
+def new_vacation(request):
+    nav = Category.objects.all()
+    if request.method == 'POST':
+        form = AddVacation(request.POST)
+        print(request.POST)
+        print(form.is_valid())
+        if form.is_valid():
+            form.save()
+        else:
+            print(form.errors)
+    else:
+        form = AddVacation()
+    context = {
+        'form': form,
+        'nav': nav
+    }
+    return render(request, 'newvacation.html', context)
 

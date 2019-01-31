@@ -63,26 +63,28 @@
 
     <!-- Page Content -->
     <div class="container">
-        {% block content %}
+
         <div class="row">
 
             <div class="col-md-3">
                 <p class="lead">Отделы</p>
                 <div class="list-group">
-                    {% for cat in category %}
-                    <a href="{{ cat.get_absolute_url }}" class="list-group-item">{{ cat.name }}</a>
-                    {% endfor %}
+                {% for category in category_list %}
+                    <a href="{{ category.get_absolute_url }}" class="list-group-item">{{ category.name }}</a>
+                {% endfor %}
+
                     <p class="lead">Работа с сотрудниками</p>
                     <div class="list-group">
 
-                        <a href="{% url 'new_employee' %}" class="list-group-item">Личн. данные</a>
-                        <a href="{% url 'new_position' %}" class="list-group-item">Назнач. должность</a>
+                        <a href="{% url 'new_employee' %}" class="list-group-item">Личные данные</a>
+                        <a href="{% url 'new_position' %}" class="list-group-item">Назначить на должность</a>
                         <a href="{% url 'new_category' %}" class="list-group-item">Новый отдел</a>
+                        <a href="{% url 'new_vacation' %}" class="list-group-item">Добавить отпуск</a>
                     </div>
                 </div>
             </div>
 
-
+            {% block content %}
             <div class="col-md-9">
 
 

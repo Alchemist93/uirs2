@@ -110,7 +110,7 @@ class Vacation(models.Model):
     end_vacation = models.DateField(verbose_name='Конец отпуска')
 
     def __str__(self):
-        return (str(self.user) + str(self.start_vacation) + str(self.end_vacation))
+        return (str(self.user) + " " + str(self.start_vacation) + " " + str(self.end_vacation))
 
     class Meta:
         verbose_name = 'Отпуск'

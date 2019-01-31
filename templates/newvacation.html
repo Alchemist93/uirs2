@@ -6,10 +6,12 @@
 <div class="col-sm-12">
 <h2>{{ cats.name }}</h2>
 <hr>
-    <h1>Добавление отдела</h1>
+    <h1>Должность сотрудника</h1>
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
 
-      Отдел  {{ form.name }}
+      Сотрудник  {{ form.user }}
+        Дата начала отпуска {{ form.start_vacation }}
+        Дата окончания отпуска {{ form.end_vacation}}
 
         <button type="submit" class="save btn btn-default">Сохранить</button>
     </form>

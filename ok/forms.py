@@ -1,5 +1,5 @@
 from django import forms
-from .models import Employee, Position, Category
+from .models import Employee, Position, Category, Vacation
 
 
 class EmployeeForm(forms.ModelForm):
@@ -22,3 +22,10 @@ class AddCategory(forms.ModelForm):
     class Meta:
         model = Category
         fields = ('name',)
+
+
+class AddVacation(forms.ModelForm):
+
+    class Meta:
+        model = Vacation
+        fields = ('user', 'start_vacation', 'end_vacation',)
