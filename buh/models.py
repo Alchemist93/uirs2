@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from ok.models import Employee
 
 # Create your models here.
 
@@ -51,6 +52,21 @@ class Items(models.Model):
     class Meta:
         verbose_name = 'Предмет'
         verbose_name_plural = 'Предметы'
+
+
+class ItemInStorage(models.Model):
+    submitted = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name='Сотрудник')
+    name = models.ForeignKey(Items, on_delete=models.CASCADE, verbose_name='Наименование')
+    amount = models.IntegerField(max_length=6, verbose_name='Количество')
+    slug = models.SlugField(blank=True)
+
+    def __str__(self):
+        return str(self.submitted) + ' ' + str(self.name) + ' ' + str(self.amount)
+
+    class Meta:
+        verbose_name = 'Переданный предмет'
+        verbose_name_plural = 'Переданные предметы'
+
 
 
 
