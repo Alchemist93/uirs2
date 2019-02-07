@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="3ee5d902-3fd4-41fe-b8f2-b5beeecc9228" name="12" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
     <list default="true" id="0f761c45-7190-4a63-bcfc-1e274ac53806" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buh/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/buh/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buh/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/buh/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ok/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ok/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uirsproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/uirsproject/settings.py" afterDir="false" />
+    </list>
+    <list id="3ee5d902-3fd4-41fe-b8f2-b5beeecc9228" name="12" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <ignored path="db.sqlite3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +54,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buh/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+            <state relative-caret-position="257">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -123,8 +120,11 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ok/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
+            <state relative-caret-position="153">
+              <caret line="11" column="52" lean-forward="true" selection-start-line="9" selection-end-line="11" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,6 +197,11 @@
               <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="uirsproject" type="462c0819:PsiDirectoryNode" />
               <item name="buh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uirsproject" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
@@ -389,7 +394,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549519944967</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="some fixes">
+      <created>1549521879195</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549521879195</updated>
+    </task>
+    <task id="LOCAL-00017" summary="edited settings to image upload">
+      <created>1549522171735</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1549522171735</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,7 +481,9 @@
     <MESSAGE value="added interaction model" />
     <MESSAGE value="added items model and edited interactions" />
     <MESSAGE value="added items in storage model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added items in storage model" />
+    <MESSAGE value="some fixes" />
+    <MESSAGE value="edited settings to image upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited settings to image upload" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/category.html">
@@ -912,15 +933,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ok/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
+        <state relative-caret-position="153">
+          <caret line="11" column="52" lean-forward="true" selection-start-line="9" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buh/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="257">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

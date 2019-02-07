@@ -38,6 +38,7 @@ def pre_save_cp(sender, instance, *args, **kwargs):
         slug = slugify(translit(str(instance.name), reversed=True))
         instance.slug = slug
 
+
 pre_save.connect(pre_save_cp, sender=Counterparty)
 
 
@@ -56,7 +57,9 @@ class Interactions(models.Model):
         verbose_name = 'Операция'
         verbose_name_plural = 'Операции'
 
+
 pre_save.connect(pre_save_cp, sender=Interactions)
+
 
 class Items(models.Model):
     name = models.CharField(max_length=30, verbose_name='Наименование')
@@ -84,6 +87,7 @@ class ItemInStorage(models.Model):
     class Meta:
         verbose_name = 'Переданный предмет'
         verbose_name_plural = 'Переданные предметы'
+
 
 pre_save.connect(pre_save_cp, sender=ItemInStorage)
 
