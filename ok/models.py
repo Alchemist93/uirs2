@@ -115,3 +115,15 @@ class Vacation(models.Model):
     class Meta:
         verbose_name = 'Отпуск'
         verbose_name_plural = 'Отпуска'
+
+
+class Month(models.Model):
+    name = models.CharField(max_length=12, verbose_name='Название месяца')
+    number_of_days = models.PositiveIntegerField(max_length=2, verbose_name='Количество дней')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Месяц'
+        verbose_name_plural = 'Месяцы'

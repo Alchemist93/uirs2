@@ -1,4 +1,6 @@
+
 {% extends 'base.html' %}
+
 
 {% block content %}
 
@@ -9,9 +11,9 @@
     <h1>Должность сотрудника</h1>
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
 
-      Сотрудник  {{ form.user }}
-        Дата начала отпуска {{ form.start_vacation }}
-        Дата окончания отпуска {{ form.end_vacation}}
+      Сотрудник  {{ form.user }} <br>
+        Дата начала отпуска {{ form.start_vacation }}<br>
+        Дата окончания отпуска {{ form.end_vacation}}<br>
 
         <button type="submit" class="save btn btn-default">Сохранить</button>
     </form>
