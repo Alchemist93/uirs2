@@ -119,7 +119,7 @@ class Vacation(models.Model):
 
 class Month(models.Model):
     name = models.CharField(max_length=12, verbose_name='Название месяца')
-    number_of_days = models.PositiveIntegerField(max_length=2, verbose_name='Количество дней')
+    number_of_days = models.PositiveIntegerField(verbose_name='Количество дней')
 
     def __str__(self):
         return self.name

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="3ee5d902-3fd4-41fe-b8f2-b5beeecc9228" name="12" comment="" />
+    <list id="3ee5d902-3fd4-41fe-b8f2-b5beeecc9228" name="12" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <list default="true" id="0f761c45-7190-4a63-bcfc-1e274ac53806" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buh/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/buh/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buh/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/buh/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ok/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ok/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uirsproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/uirsproject/settings.py" afterDir="false" />
     </list>
     <ignored path="db.sqlite3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,6 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uirsproject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ok/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,59 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DjangoModelDependency/#uirsproject" pinned="false" current-in-tab="false">
-        <entry file="uml://DjangoModelDependency/#uirsproject">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DjangoModelDependency</ID>
-              <OriginalElement>#uirsproject</OriginalElement>
-              <nodes>
-                <node x="239.5" y="211.0">ok.models.Category</node>
-                <node x="44.5" y="0.0">ok.models.Citizen</node>
-                <node x="210.5" y="444.0">ok.models.Position</node>
-                <node x="0.0" y="477.0">ok.models.Vacation</node>
-                <node x="45.5" y="123.0">ok.models.Employee</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="ok.models.Vacation" target="ok.models.Employee">
-                  <point x="0.0" y="-47.5" />
-                  <point x="-43.5" y="135.5" />
-                </edge>
-                <edge source="ok.models.Employee" target="ok.models.Citizen">
-                  <point x="0.0" y="-135.5" />
-                  <point x="0.0" y="36.5" />
-                </edge>
-                <edge source="ok.models.Position" target="ok.models.Category">
-                  <point x="37.5" y="-80.5" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="ok.models.Position" target="ok.models.Employee">
-                  <point x="-37.5" y="-80.5" />
-                  <point x="248.0" y="419.0" />
-                  <point x="176.0" y="419.0" />
-                  <point x="43.5" y="135.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-81.5" y="295.0" />
-              <SelectedNodes>
-                <node>ok.models.Category</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ok/models.py">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="78" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="56" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -91,8 +57,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buh/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="289">
+              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -103,8 +69,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ok/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="68">
+              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="41" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -112,20 +78,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newemployee.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/newemployee.html">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/buh/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newposition.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/newposition.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="136">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,6 +120,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ok/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -184,7 +153,6 @@
         <option value="$PROJECT_DIR$/templates/employee.html" />
         <option value="$PROJECT_DIR$/uirsproject/urls.py" />
         <option value="$PROJECT_DIR$/context_processors/category.py" />
-        <option value="$PROJECT_DIR$/uirsproject/settings.py" />
         <option value="$PROJECT_DIR$/templates/category.html" />
         <option value="$PROJECT_DIR$/templates/newcategory.html" />
         <option value="$PROJECT_DIR$/templates/newemployee.html" />
@@ -193,8 +161,10 @@
         <option value="$PROJECT_DIR$/ok/views.py" />
         <option value="$PROJECT_DIR$/ok/forms.py" />
         <option value="$PROJECT_DIR$/templates/newvacation.html" />
-        <option value="$PROJECT_DIR$/ok/models.py" />
         <option value="$PROJECT_DIR$/ok/admin.py" />
+        <option value="$PROJECT_DIR$/buh/admin.py" />
+        <option value="$PROJECT_DIR$/ok/models.py" />
+        <option value="$PROJECT_DIR$/uirsproject/settings.py" />
         <option value="$PROJECT_DIR$/buh/models.py" />
       </list>
     </option>
@@ -227,6 +197,11 @@
               <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="uirsproject" type="462c0819:PsiDirectoryNode" />
               <item name="buh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uirsproject" type="462c0819:PsiDirectoryNode" />
+              <item name="ok" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uirsproject" type="b2602c69:ProjectViewProjectNode" />
@@ -400,12 +375,25 @@
       <option name="project" value="LOCAL" />
       <updated>1549518072735</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added items model and edited interactions">
+      <created>1549518764551</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1549518764551</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added items in storage model">
+      <created>1549519944967</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549519944967</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021322" side_tool="true" weight="0.3295099" />
@@ -472,29 +460,11 @@
     <MESSAGE value="added model month" />
     <MESSAGE value="added buh app and counterparty class" />
     <MESSAGE value="added interaction model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added interaction model" />
+    <MESSAGE value="added items model and edited interactions" />
+    <MESSAGE value="added items in storage model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added items in storage model" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ok/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="5" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/context_processors/category.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -872,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uirsproject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ok/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
@@ -915,28 +878,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ok/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="68">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="41" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/buh/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uirsproject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ok/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="78" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="56" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buh/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
