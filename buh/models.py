@@ -28,11 +28,29 @@ class Interactions(models.Model):
     count = models.DecimalField(max_digits=20, verbose_name='Сумма')
     comment = models.IntegerField(max_length=600, verbose_name='Комментарий')
     scan = models.ImageField(blank=True, verbose_name='Платежка или основание')
+    date = models.DateField(verbose_name='Дата')
     slug = models.SlugField(blank=True)
+
+    def __str__(self):
+        return str(self.name) + ' ' + str(self.date)
+
+    class Meta:
+        verbose_name = 'Операция'
+        verbose_name_plural = 'Операции'
+
+
+class Items(models.Model):
+    name = models.CharField(max_length=30, verbose_name='Наименование')
+    cost = models.DecimalField(decimal_places=2, verbose_name='Стоимость')
+    provider = models.ForeignKey(Counterparty, on_delete=models.CASCADE, verbose_name='Поставщик')
+    amount = models.IntegerField(max_length=6, verbose_name='Количество')
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = 'Операция'
-        verbose_name_plural = 'Операции'
+        verbose_name = 'Предмет'
+        verbose_name_plural = 'Предметы'
+
+
+
