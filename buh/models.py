@@ -9,6 +9,11 @@ from django.db.models.signals import pre_save
 # Create your models here.
 
 
+def image_folder(instance, filename):
+    filename = instance.slug + '.' + filename.split('.')[1]
+    return "{0}/{1}".format(instance.slug, filename)
+
+
 class Counterparty(models.Model):
     name = models.CharField(max_length=50, verbose_name='Наименование')
     adress = models.CharField(max_length=50, verbose_name='Адрес компании')
@@ -40,7 +45,7 @@ class Interactions(models.Model):
     name = models.ForeignKey(Counterparty, on_delete=models.CASCADE,verbose_name='Наименование')
     count = models.DecimalField(decimal_places=2, max_digits=999, verbose_name='Сумма')
     comment = models.CharField(max_length=600, verbose_name='Комментарий')
-    scan = models.ImageField(blank=True, verbose_name='Платежка или основание')
+    scan = models.ImageField(upload_to=image_folder, blank=True, verbose_name='Платежка или основание')
     date = models.DateField(verbose_name='Дата')
     slug = models.SlugField(blank=True)
 
