@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import LabTestsForm
+from ok.models import Position
 
 # Create your views here.
 
@@ -14,7 +15,8 @@ def new_lab_test(request):
             print(form.errors)
     else:
         form = LabTestsForm()
+        form.fields["name_of_assistant"].queryset = Position.objects.filter(depart__slug="laboratorija")
     context = {
         'form': form,
     }
-    return render(request, 'newlabtestform.html', context)
+    return render(request, 'lab/newlabtestform.html', context)

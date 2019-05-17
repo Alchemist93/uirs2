@@ -88,7 +88,7 @@ class Position(models.Model):
     slug = models.SlugField(blank=True)
 
     def __str__(self):
-        return self.position
+        return str(self.user) + ' ' + str(self.position)
 
     class Meta:
         verbose_name = 'Сотрудник'

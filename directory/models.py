@@ -23,3 +23,14 @@ class PaintMan(models.Model):
     class Meta:
         verbose_name = 'Производитель краски'
         verbose_name_plural = 'Производители краски'
+
+
+class SteelMan(models.Model):
+    steel_man = models.CharField(verbose_name='Производитель стали', max_length=20)
+
+    def __str__(self):
+        return str(self.steel_man)
+
+    class Meta:
+        verbose_name = 'Производитель стали'
+        verbose_name_plural = 'Производители стали'

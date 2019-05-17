@@ -2,7 +2,7 @@ from django.db import models
 from storage.models import Roll
 from prodline.models import RollModified
 from directory.models import Ral, PaintMan
-from ok.models import Employee
+from ok.models import Employee, Position
 
 # Create your models here.
 
@@ -104,7 +104,7 @@ class LabTests(models.Model):
     total_thickness = models.CharField(verbose_name='Общая толщина', max_length=20)
     mass_finished = models.CharField(verbose_name='Масса готовой продукции', max_length=20)
     len_finished = models.CharField(verbose_name='Длина готовой продукции', max_length=20)
-    name_of_assistant = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name='Имя лаборанта')
+    name_of_assistant = models.ForeignKey(Position, on_delete=models.CASCADE, verbose_name='Имя лаборанта')
     comment = models.CharField(verbose_name='Примечания', max_length=20)
 
     def __str__(self):
