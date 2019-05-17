@@ -18,6 +18,7 @@ from django.urls import path
 from ok.views import base_view, category_view, personal_view, new_employee, new_position, new_category, new_vacation
 from django.conf import settings
 from django.conf.urls.static import static
+from laboratory.views import new_lab_test
 
 
 urlpatterns = [
@@ -27,6 +28,7 @@ urlpatterns = [
     path('newcategory/', new_category, name='new_category'),
     path('newvacation/', new_vacation, name='new_vacation'),
     path('newposition/', new_position, name='new_position'),
+    path('newlabtest/', new_lab_test, name='new_lab_test'),
     path('category/<slug:category_slug>/', category_view, name='category_detail'),
     path('personal/<slug:personal_slug>', personal_view, name='personal_detail'),
 ]
