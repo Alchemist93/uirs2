@@ -2,12 +2,13 @@ from django.db import models
 
 # Create your models here.
 
+
 class Ral(models.Model):
     ral = models.CharField(verbose_name='RAL', max_length=20)
     ral_color = models.CharField(verbose_name='Цвет краски', max_length=20)
 
     def __str__(self):
-        return str(self.ral)+ ' ' + str(self.ral_color)
+        return str(self.ral) + ' ' + str(self.ral_color)
 
     class Meta:
         verbose_name = 'RAL цвет'

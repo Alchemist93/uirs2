@@ -4,6 +4,7 @@ from ok.models import Position
 
 # Create your views here.
 
+
 def new_lab_test(request):
     if request.method == 'POST':
         form = LabTestsForm(request.POST)
