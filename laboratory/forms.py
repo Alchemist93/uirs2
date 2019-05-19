@@ -1,8 +1,13 @@
 from django import forms
 from .models import LabTestsQualityOfCleaning, LabTests, LabTestsInputControl, Bonderit
-
+import datetime
+from django.forms import ModelChoiceField
+from prodline.models import RollModified
+from directory.models import Ral, PaintMan
+from ok.models import Position
 
 class LabTestsInputControlForm(forms.ModelForm):
+    date = forms.DateTimeField(required=True, initial=datetime.datetime.now)
 
     class Meta:
         model = LabTestsInputControl
@@ -12,6 +17,55 @@ class LabTestsInputControlForm(forms.ModelForm):
 
 
 class LabTestsForm(forms.ModelForm):
+    roll_number = ModelChoiceField(queryset=RollModified.objects.all(), required=False)
+    ral= ModelChoiceField(queryset=Ral.objects.all(), required=False)
+    paint_man = ModelChoiceField(queryset=PaintMan.objects.all(), required=False)
+    dry_layer_thickness_1 = forms.FloatField(required=False)
+    dry_layer_thickness_2 = forms.FloatField(required=False)
+    dry_layer_thickness_3 = forms.FloatField(required=False)
+    dry_layer_thickness_sr = forms.FloatField(required=False)
+    primer_layer_thickness_1 = forms.FloatField( required=False)
+    primer_layer_thickness_2 = forms.FloatField(required=False)
+    primer_layer_thickness_3 = forms.FloatField(required=False)
+    primer_layer_thickness_sr = forms.FloatField(required=False)
+    reverse_layer_thickness_1 = forms.FloatField(required=False)
+    reverse_layer_thickness_2 = forms.FloatField(required=False)
+    reverse_layer_thickness_3 = forms.FloatField(required=False)
+    reverse_layer_thickness_sr = forms.FloatField(required=False)
+    brilliance_1 = forms.FloatField(required=False)
+    brilliance_2 = forms.FloatField(required=False)
+    brilliance_3 = forms.FloatField(required=False)
+    brilliance_sr = forms.FloatField(required=False)
+    notched_adhesion_1 = forms.FloatField(required=False)
+    notched_adhesion_2 = forms.FloatField(required=False)
+    notched_adhesion_3 = forms.FloatField(required=False)
+    notched_adhesion_sr = forms.FloatField(required=False)
+    resistance_to_shock_1 = forms.FloatField(required=False)
+    resistance_to_shock_2 = forms.FloatField(required=False)
+    resistance_to_shock_3 = forms.FloatField(required=False)
+    resistance_to_shock_sr = forms.FloatField(required=False)
+    abrasion_resistance_1 = forms.FloatField(required=False)
+    abrasion_resistance_2 = forms.FloatField(required=False)
+    abrasion_resistance_3 = forms.FloatField(required=False)
+    abrasion_resistance_sr = forms.FloatField(required=False)
+    flexural_strength = forms.FloatField(required=False)
+    pencil_hardness_1 = forms.FloatField(required=False)
+    pencil_hardness_2 = forms.FloatField(required=False)
+    pencil_hardness_3 = forms.FloatField(required=False)
+    pencil_hardness_sr = forms.FloatField(required=False)
+    eriksen_1 = forms.FloatField(required=False)
+    eriksen_2 = forms.FloatField(required=False)
+    eriksen_3 = forms.FloatField(required=False)
+    eriksen_sr = forms.FloatField(required=False)
+    color_standart_1 = forms.FloatField(required=False)
+    color_standart_2 = forms.FloatField(required=False)
+    color_standart_3 = forms.FloatField(required=False)
+    color_standart_sr = forms.FloatField(required=False)
+    total_thickness = forms.FloatField(required=False)
+    mass_finished = forms.FloatField(required=False)
+    len_finished = forms.FloatField(required=False)
+    name_of_assistant = ModelChoiceField(queryset=Position.objects.filter(depart__slug="laboratorija"), required=False)
+    comment = forms.CharField(max_length=20, required=False)
 
     class Meta:
         model = LabTests

@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}'>
+
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='{% static 'css/shop-homepage.css' %}'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Работа с сотрудниками</p>
+                    <div class="list-group">
+
+                        <a href="{% url 'new_lab_test_input' %}" class="list-group-item">Входной контроль</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+
+
+                    <p class="lead">Работа с сотрудниками</p>
+                    <div class="list-group">
+
+                        <a href="{% url 'new_employee' %}" class="list-group-item">Личные данные</a>
+                        <a href="{% url 'new_position' %}" class="list-group-item">Назначить на должность</a>
+                        <a href="{% url 'new_category' %}" class="list-group-item">Новый отдел</a>
+                        <a href="{% url 'new_vacation' %}" class="list-group-item">Добавить отпуск</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+<div class="col-sm-12">
+<h2>{{ cats.name }}</h2>
+<hr>
+    <h1>Входной контроль</h1>
+    {% csrf_token %}
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+        <table frame="border" border="2">
+    <tr>
+        <td rowspan="2">№</td>
+        <td rowspan="2">Дата и время</td>
+        <td rowspan="2">№ Рулона</td>
+        <td rowspan="2">№ Плавки</td>
+        <td rowspan="2">№ Партии</td>
+        <td colspan="2">Толщина металлопроката, мм</td>
+        <td rowspan="2">Вес, кг по бирке</td>
+        <td rowspan="2">Длина, м по бирке</td>
+        <td rowspan="2">Адгезия цинка, балл</td>
+        <td rowspan="2">Прочность на обратный удар цинка, Дж</td>
+        <td rowspan="2">Относительная влажность воздуха, % t C</td>
+    </tr>
+    <tr>
+        <td>По бирке</td>
+        <td>По факту</td>
+    </tr>
+    <tr>
+        <td>{{ form.number_of_record }}</td>
+        <td>{{ form.date }}</td>
+        <td>{{ form.roll_number }}</td>
+        <td>{{ form.melting_number }}</td>
+        <td>{{ form.batch_number }}</td>
+        <td>{{ form.metall_thickness_in_doc }}</td>
+        <td>{{ form.metall_thickness_in_fact }}</td>
+        <td>{{ form.tag_weight }}</td>
+        <td>{{ form.tag_len }}</td>
+        <td>{{ form.zink_adhesion }}</td>
+        <td>{{ form.zink_strength }}</td>
+        <td>{{ form.air_humidity }}</td>
+    </tr>
+</table>
+
+        <button type="submit" class="save btn btn-default">Сохранить данные</button>
+    </form>
+</div>
+
+    </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src='{% static "js/jquery.js" %}'></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src='{% static "js/bootstrap.js" %}'></script>
+
+</body>
+
+</html>

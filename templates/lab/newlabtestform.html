@@ -12,12 +12,12 @@
 
     <title>Shop Homepage - Start Bootstrap Template</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}'>
 
     <!-- Custom CSS -->
     <link rel='stylesheet' href='{% static 'css/shop-homepage.css' %}'>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,7 +70,7 @@
                 <p class="lead">Работа с сотрудниками</p>
                     <div class="list-group">
 
-                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+                        <a href="{% url 'new_lab_test_input' %}" class="list-group-item">Входной контроль</a>
                         <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
                         <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
                         <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
@@ -90,9 +90,10 @@
             <div class="col-md-9">
 <div class="col-sm-12">
 <h2>{{ cats.name }}</h2>
+
 <hr>
     <h1>Лабораторные тесты</h1>
-    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+    <form name='form1' method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
         <table frame="border" border="2">
             <tr>
                 <td rowspan="2" align="center">Номер рулона</td>
@@ -162,10 +163,10 @@
                 <td>{{ form.roll_number }}</td>
                 <td>{{ form.ral }}</td>
                 <td>{{ form.paint_man }}</td>
-                <td>{{ form.dry_layer_thickness_1 }}</td>
-                <td>{{ form.dry_layer_thickness_2 }}</td>
-                <td>{{ form.dry_layer_thickness_3 }}</td>
-                <td>{{ form.dry_layer_thickness_sr }}</td>
+                <td class="td-t1" name="t1">{{ form.dry_layer_thickness_1 }}</td>
+                <td name="t2">{{ form.dry_layer_thickness_2 }}</td>
+                <td name="t3">{{ form.dry_layer_thickness_3 }}</td>
+                <td name="res">{{ form.dry_layer_thickness_sr }}</td>
                 <td>{{ form.primer_layer_thickness_1 }}</td>
                 <td>{{ form.primer_layer_thickness_2 }}</td>
                 <td>{{ form.primer_layer_thickness_3 }}</td>
@@ -210,7 +211,8 @@
                 <td>{{ form.comment }}</td>
             </tr>
         </table>
-
+        <input type="button" name="button" value="Вычислить" onclick="areaRec();">
+        <button onclick="areaRec();">Вычислить</button><br><br>
         <button type="submit" class="save btn btn-default">Сохранить данные</button>
     </form>
 </div>
@@ -236,9 +238,10 @@
 
     </div>
     <!-- /.container -->
-
+    <script type="text/javascript" src='{% static "js/mathem.js" %}'></script>
     <!-- jQuery -->
     <script src='{% static "js/jquery.js" %}'></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src='{% static "js/bootstrap.js" %}'></script>
