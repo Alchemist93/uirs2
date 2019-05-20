@@ -190,7 +190,7 @@ class LabTests(DryLayer, PrimerLayer, ReverseLayer, Brilliance, NotchedAdhesion,
 
     def __str__(self):
         return (str(self.roll_number) + ' ' + str(self.ral) + ' '
-                + str(self.mass_finished) + ' ' + str(self.len_finished))
+                + str(self.mass_finished) + 'тонн  ' + str(self.len_finished) + 'метров ')
 
     class Meta:
         verbose_name = 'Лабораторные испытания'

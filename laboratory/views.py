@@ -1,8 +1,33 @@
 from django.shortcuts import render
+from laboratory.models import LabTests as LabTestsModel
 from .forms import LabTestsForm, LabTestsInputControlForm
 from ok.models import Position
 from prodline.models import RollModified
+from dal import autocomplete
+from django.views.generic import ListView
 # Create your views here.
+
+
+class LabTests(ListView):
+    """
+    Список всех доступных статей
+    """
+
+    # Нижеуказанные параметры можно также передать данному отображению через метод as_view()
+    # url(r'^$', Posts.as_view(context_object_name='posts', template_name='posts.html))
+    model = LabTestsModel
+    # Под данным именем наш список статей будет доступен в шаблоне
+    context_object_name = 'tests'
+    # Название шаблона
+    template_name = 'lab/labtestview.html'
+    # Количество объектов на 1 страницу
+    paginate_by = 10
+
+    def get_queryset(self):
+        qs = LabTestsModel.objects.all().order_by('roll_number')
+        #if not self.request.user.is_authenticated():
+            #return qs.exclude(is_private=True)
+        return qs
 
 
 def new_lab_test(request):
@@ -39,3 +64,12 @@ def new_lab_test_input(request):
         'form': form,
     }
     return render(request, 'lab/newinputcontrolform.html', context)
+
+
+class RollAuto(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        qs = RollModified.objects.all()
+        if self.q:
+            qs = qs.filter(number_of_roll__number_of_roll=self.q)
+        return qs
+

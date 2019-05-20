@@ -18,7 +18,7 @@ from django.urls import path
 from ok.views import base_view, category_view, personal_view, new_employee, new_position, new_category, new_vacation
 from django.conf import settings
 from django.conf.urls.static import static
-from laboratory.views import new_lab_test, new_lab_test_input
+from laboratory.views import new_lab_test, new_lab_test_input, RollAuto, LabTests
 
 
 urlpatterns = [
@@ -29,6 +29,8 @@ urlpatterns = [
     path('newvacation/', new_vacation, name='new_vacation'),
     path('newposition/', new_position, name='new_position'),
     path('newlabtest/', new_lab_test, name='new_lab_test'),
+    path('labtestview/', LabTests.as_view(), name='lab_test_view'),
+    path('roll-auto/', RollAuto.as_view(), name='roll-auto'),
     path('newlabtestinput/', new_lab_test_input, name='new_lab_test_input'),
     path('category/<slug:category_slug>/', category_view, name='category_detail'),
     path('personal/<slug:personal_slug>', personal_view, name='personal_detail'),

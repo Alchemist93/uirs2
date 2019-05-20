@@ -5,6 +5,9 @@ from django.forms import ModelChoiceField
 from prodline.models import RollModified
 from directory.models import Ral, PaintMan
 from ok.models import Position
+from dal import autocomplete
+from django.contrib.admin import widgets
+
 
 class LabTestsInputControlForm(forms.ModelForm):
     date = forms.DateTimeField(required=True, initial=datetime.datetime.now)
@@ -17,7 +20,8 @@ class LabTestsInputControlForm(forms.ModelForm):
 
 
 class LabTestsForm(forms.ModelForm):
-    roll_number = ModelChoiceField(queryset=RollModified.objects.all(), required=False)
+    roll_number = ModelChoiceField(queryset=RollModified.objects.all(), required=False,
+                                   widget=autocomplete.ModelSelect2(url='roll-auto'))
     ral= ModelChoiceField(queryset=Ral.objects.all(), required=False)
     paint_man = ModelChoiceField(queryset=PaintMan.objects.all(), required=False)
     dry_layer_thickness_1 = forms.FloatField(required=False)
