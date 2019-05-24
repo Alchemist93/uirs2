@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}'>
+
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='{% static 'css/shop-homepage.css' %}'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Работа с сотрудниками</p>
+                    <div class="list-group">
+
+                        <a href="{% url 'new_lab_test_input' %}" class="list-group-item">Входной контроль</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+                        <a href="{% url 'new_lab_test' %}" class="list-group-item">Новый лабораторный тест</a>
+
+
+                    <p class="lead">Работа с сотрудниками</p>
+                    <div class="list-group">
+
+                        <a href="{% url 'new_employee' %}" class="list-group-item">Личные данные</a>
+                        <a href="{% url 'new_position' %}" class="list-group-item">Назначить на должность</a>
+                        <a href="{% url 'new_category' %}" class="list-group-item">Новый отдел</a>
+                        <a href="{% url 'new_vacation' %}" class="list-group-item">Добавить отпуск</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+<div class="col-sm-12">
+<h2>{{ cats.name }}</h2>
+
+<hr>
+    <h1>Лабораторные тесты</h1>
+    <table frame="border" border="2">
+        <tr>
+            <td rowspan="2" align="center">Номер рулона</td>
+            <td rowspan="2" align="center">RAL</td>
+            <td rowspan="2" align="center">Производитель краски</td>
+            <td colspan="3" align="center">Толщина сухого слоя мкм
+            </td>
+            <td rowspan="2" align="center">Толщина сухого слоя мкм среднее</td>
+            <td colspan="3" align="center">Толщина слоя грунта</td>
+            <td rowspan="2" align="center">Толщина слоя грунта среднее</td>
+            <td colspan="3" align="center">Толщина обратного слоя мкм</td>
+            <td rowspan="2" align="center">Толщина обратного слоя мкм среднее</td>
+            <td colspan="3" align="center">Блеск %</td>
+            <td rowspan="2" align="center">Блеск % среднее</td>
+            <td colspan="3" align="center">Адгезия с надрезом</td>
+            <td rowspan="2" align="center">Адгезия с надрезом среднее</td>
+            <td colspan="3" align="center">Стойкость к обратному удару</td>
+            <td rowspan="2" align="center">Стойкость к обратному удару среднее</td>
+            <td colspan="3" align="center">Стойкость к истиранию</td>
+            <td rowspan="2" align="center">Стойкость к истиранию среднее</td>
+            <td rowspan="2" align="center">Прочность при изгибе</td>
+            <td colspan="3" align="center">Прочность по карандашу</td>
+            <td rowspan="2" align="center">Прочность по карандашу среднее</td>
+            <td colspan="3" align="center">Прочность по Эриксену</td>
+            <td rowspan="2" align="center">Прочность по Эриксену среднее</td>
+            <td colspan="3" align="center">Стандарт цвета</td>
+            <td rowspan="2" align="center">Стандарт цвета среднее</td>
+            <td rowspan="2" align="center">Общая толщина</td>
+            <td rowspan="2" align="center">Масса готовой продукции</td>
+            <td rowspan="2" align="center">Длина готовой продукции</td>
+            <td rowspan="2" align="center">Имя лаборанта </td>
+            <td rowspan="2" align="center">Примечания</td>
+        </tr>
+        <tr>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+            <td>Замер 1</td>
+            <td>Замер 2</td>
+            <td>Замер 3</td>
+        </tr>
+    {% for test in tests %}
+        <tr>
+            <td>{{ test.roll_number }}</td>
+            <td>{{ test.ral }}</td>
+            <td>{{ test.paint_man }}</td>
+            <td>{{ test.dry_layer_thickness_1 }}</td>
+            <td>{{ test.dry_layer_thickness_2 }}</td>
+            <td>{{ test.dry_layer_thickness_3 }}</td>
+            <td>{{ test.dry_layer_thickness_sr }}</td>
+            <td>{{ test.primer_layer_thickness_1 }}</td>
+            <td>{{ test.primer_layer_thickness_2 }}</td>
+            <td>{{ test.primer_layer_thickness_3 }}</td>
+            <td>{{ test.primer_layer_thickness_sr }}</td>
+            <td>{{ test.reverse_layer_thickness_1 }}</td>
+            <td>{{ test.reverse_layer_thickness_2 }}</td>
+            <td>{{ test.reverse_layer_thickness_3 }}</td>
+            <td>{{ test.reverse_layer_thickness_sr }}</td>
+            <td>{{ test.brilliance_1 }}</td>
+            <td>{{ test.brilliance_2 }}</td>
+            <td>{{ test.brilliance_3 }}</td>
+            <td>{{ test.brilliance_sr }}</td>
+            <td>{{ test.notched_adhesion_1 }}</td>
+            <td>{{ test.notched_adhesion_2 }}</td>
+            <td>{{ test.notched_adhesion_3 }}</td>
+            <td>{{ test.notched_adhesion_sr }}</td>
+            <td>{{ test.resistance_to_shock_1 }}</td>
+            <td>{{ test.resistance_to_shock_2 }}</td>
+            <td>{{ test.resistance_to_shock_3 }}</td>
+            <td>{{ test.resistance_to_shock_sr }}</td>
+            <td>{{ test.abrasion_resistance_1 }}</td>
+            <td>{{ test.abrasion_resistance_2 }}</td>
+            <td>{{ test.abrasion_resistance_3 }}</td>
+            <td>{{ test.abrasion_resistance_sr }}</td>
+            <td>{{ test.flexural_strength }}</td>
+            <td>{{ test.pencil_hardness_1 }}</td>
+            <td>{{ test.pencil_hardness_2 }}</td>
+            <td>{{ test.pencil_hardness_3 }}</td>
+            <td>{{ test.pencil_hardness_sr }}</td>
+            <td>{{ test.eriksen_1 }}</td>
+            <td>{{ test.eriksen_2 }}</td>
+            <td>{{ test.eriksen_3 }}</td>
+            <td>{{ test.eriksen_sr }}</td>
+            <td>{{ test.color_standart_1 }}</td>
+            <td>{{ test.color_standart_2 }}</td>
+            <td>{{ test.color_standart_3 }}</td>
+            <td>{{ test.color_standart_sr }}</td>
+            <td>{{ test.total_thickness }}</td>
+            <td>{{ test.mass_finished }}</td>
+            <td>{{ test.len_finished }}</td>
+            <td>{{ test.name_of_assistant }}</td>
+            <td>{{ test.comment }}</td>
+        </tr>
+    {% endfor %}
+        </table>
+
+</div>
+
+    </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    {{ form.media }}
+    <!-- /.container -->
+    <script type="text/javascript" src='{% static "js/mathem.js" %}'></script>
+    <!-- jQuery -->
+    <script src='{% static "js/jquery.js" %}'></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src='{% static "js/bootstrap.js" %}'></script>
+
+</body>
+
+</html>

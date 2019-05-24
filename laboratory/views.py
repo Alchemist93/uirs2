@@ -19,7 +19,7 @@ class LabTests(ListView):
     # Под данным именем наш список статей будет доступен в шаблоне
     context_object_name = 'tests'
     # Название шаблона
-    template_name = 'lab/labtestview.html'
+    template_name = 'lab/labtestsview.html'
     # Количество объектов на 1 страницу
     paginate_by = 10
 
