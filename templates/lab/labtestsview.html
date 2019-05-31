@@ -92,6 +92,13 @@
 <h2>{{ cats.name }}</h2>
 
 <hr>
+    <form action="" method="get">
+        {{ filter.form.as_p }}
+        <input type="submit" />
+    </form>
+    {% for obj in filter.qs %}
+        {{ obj.roll_number }} - ${{ obj.comment }}<br />
+    {% endfor %}
     <h1>Лабораторные тесты</h1>
     <table frame="border" border="2">
         <tr>
