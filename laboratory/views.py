@@ -5,6 +5,7 @@ from ok.models import Position
 from prodline.models import RollModified
 from dal import autocomplete
 from django.views.generic import ListView
+from .filters import TestsFilter
 # Create your views here.
 
 
@@ -29,6 +30,9 @@ class LabTests(ListView):
             #return qs.exclude(is_private=True)
         return qs
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] =
 
 def new_lab_test(request):
     if request.method == 'POST':
@@ -72,4 +76,9 @@ class RollAuto(autocomplete.Select2QuerySetView):
         if self.q:
             qs = qs.filter(number_of_roll__number_of_roll=self.q)
         return qs
+
+
+def tests_list(request):
+    f = TestsFilter(request.GET, queryset=LabTestsModel.objects.all())
+    return render(request, 'lab/labtestsview.html', {'filter': f})
 
