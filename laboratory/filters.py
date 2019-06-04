@@ -1,12 +1,17 @@
 import django_filters
 from .models import LabTests
+from dal import autocomplete
+
+
+#devname_url = 'roll-auto'
 
 
 class TestsFilter(django_filters.FilterSet):
-    #name = django_filters.CharFilter(lookup_expr='iexact')
+    #roll_number = django_filters.CharFilter(widget=autocomplete.ListSelect2(url='roll-auto'))
+
 
     class Meta:
         model = LabTests
-        fields = ['comment']
+        fields = ['roll_number']
 
 

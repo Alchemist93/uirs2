@@ -32,7 +32,9 @@ class LabTests(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['filter'] =
+        context['filter'] = TestsFilter(self.request.GET, queryset=self.get_queryset())
+        return context
+
 
 def new_lab_test(request):
     if request.method == 'POST':
@@ -77,8 +79,4 @@ class RollAuto(autocomplete.Select2QuerySetView):
             qs = qs.filter(number_of_roll__number_of_roll=self.q)
         return qs
 
-
-def tests_list(request):
-    f = TestsFilter(request.GET, queryset=LabTestsModel.objects.all())
-    return render(request, 'lab/labtestsview.html', {'filter': f})
 

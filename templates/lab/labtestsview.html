@@ -93,11 +93,11 @@
 
 <hr>
     <form action="" method="get">
-        {{ filter.form.as_p }}
+        {{ filter.form}}
         <input type="submit" />
     </form>
     {% for obj in filter.qs %}
-        {{ obj.roll_number }} - ${{ obj.comment }}<br />
+        {{ obj.roll_number }} - {{ obj.comment }}<br />
     {% endfor %}
     <h1>Лабораторные тесты</h1>
     <table frame="border" border="2">
@@ -165,57 +165,57 @@
             <td>Замер 2</td>
             <td>Замер 3</td>
         </tr>
-    {% for test in tests %}
+    {% for obj in filter.qs %}
         <tr>
-            <td>{{ test.roll_number }}</td>
-            <td>{{ test.ral }}</td>
-            <td>{{ test.paint_man }}</td>
-            <td>{{ test.dry_layer_thickness_1 }}</td>
-            <td>{{ test.dry_layer_thickness_2 }}</td>
-            <td>{{ test.dry_layer_thickness_3 }}</td>
-            <td>{{ test.dry_layer_thickness_sr }}</td>
-            <td>{{ test.primer_layer_thickness_1 }}</td>
-            <td>{{ test.primer_layer_thickness_2 }}</td>
-            <td>{{ test.primer_layer_thickness_3 }}</td>
-            <td>{{ test.primer_layer_thickness_sr }}</td>
-            <td>{{ test.reverse_layer_thickness_1 }}</td>
-            <td>{{ test.reverse_layer_thickness_2 }}</td>
-            <td>{{ test.reverse_layer_thickness_3 }}</td>
-            <td>{{ test.reverse_layer_thickness_sr }}</td>
-            <td>{{ test.brilliance_1 }}</td>
-            <td>{{ test.brilliance_2 }}</td>
-            <td>{{ test.brilliance_3 }}</td>
-            <td>{{ test.brilliance_sr }}</td>
-            <td>{{ test.notched_adhesion_1 }}</td>
-            <td>{{ test.notched_adhesion_2 }}</td>
-            <td>{{ test.notched_adhesion_3 }}</td>
-            <td>{{ test.notched_adhesion_sr }}</td>
-            <td>{{ test.resistance_to_shock_1 }}</td>
-            <td>{{ test.resistance_to_shock_2 }}</td>
-            <td>{{ test.resistance_to_shock_3 }}</td>
-            <td>{{ test.resistance_to_shock_sr }}</td>
-            <td>{{ test.abrasion_resistance_1 }}</td>
-            <td>{{ test.abrasion_resistance_2 }}</td>
-            <td>{{ test.abrasion_resistance_3 }}</td>
-            <td>{{ test.abrasion_resistance_sr }}</td>
-            <td>{{ test.flexural_strength }}</td>
-            <td>{{ test.pencil_hardness_1 }}</td>
-            <td>{{ test.pencil_hardness_2 }}</td>
-            <td>{{ test.pencil_hardness_3 }}</td>
-            <td>{{ test.pencil_hardness_sr }}</td>
-            <td>{{ test.eriksen_1 }}</td>
-            <td>{{ test.eriksen_2 }}</td>
-            <td>{{ test.eriksen_3 }}</td>
-            <td>{{ test.eriksen_sr }}</td>
-            <td>{{ test.color_standart_1 }}</td>
-            <td>{{ test.color_standart_2 }}</td>
-            <td>{{ test.color_standart_3 }}</td>
-            <td>{{ test.color_standart_sr }}</td>
-            <td>{{ test.total_thickness }}</td>
-            <td>{{ test.mass_finished }}</td>
-            <td>{{ test.len_finished }}</td>
-            <td>{{ test.name_of_assistant }}</td>
-            <td>{{ test.comment }}</td>
+            <td>{{ obj.roll_number }}</td>
+            <td>{{ obj.ral }}</td>
+            <td>{{ obj.paint_man }}</td>
+            <td>{{ obj.dry_layer_thickness_1 }}</td>
+            <td>{{ obj.dry_layer_thickness_2 }}</td>
+            <td>{{ obj.dry_layer_thickness_3 }}</td>
+            <td>{{ obj.dry_layer_thickness_sr }}</td>
+            <td>{{ obj.primer_layer_thickness_1 }}</td>
+            <td>{{ obj.primer_layer_thickness_2 }}</td>
+            <td>{{ obj.primer_layer_thickness_3 }}</td>
+            <td>{{ obj.primer_layer_thickness_sr }}</td>
+            <td>{{ obj.reverse_layer_thickness_1 }}</td>
+            <td>{{ obj.reverse_layer_thickness_2 }}</td>
+            <td>{{ obj.reverse_layer_thickness_3 }}</td>
+            <td>{{ obj.reverse_layer_thickness_sr }}</td>
+            <td>{{ obj.brilliance_1 }}</td>
+            <td>{{ obj.brilliance_2 }}</td>
+            <td>{{ obj.brilliance_3 }}</td>
+            <td>{{ obj.brilliance_sr }}</td>
+            <td>{{ obj.notched_adhesion_1 }}</td>
+            <td>{{ obj.notched_adhesion_2 }}</td>
+            <td>{{ obj.notched_adhesion_3 }}</td>
+            <td>{{ obj.notched_adhesion_sr }}</td>
+            <td>{{ obj.resistance_to_shock_1 }}</td>
+            <td>{{ obj.resistance_to_shock_2 }}</td>
+            <td>{{ obj.resistance_to_shock_3 }}</td>
+            <td>{{ obj.resistance_to_shock_sr }}</td>
+            <td>{{ obj.abrasion_resistance_1 }}</td>
+            <td>{{ obj.abrasion_resistance_2 }}</td>
+            <td>{{ obj.abrasion_resistance_3 }}</td>
+            <td>{{ obj.abrasion_resistance_sr }}</td>
+            <td>{{ obj.flexural_strength }}</td>
+            <td>{{ obj.pencil_hardness_1 }}</td>
+            <td>{{ obj.pencil_hardness_2 }}</td>
+            <td>{{ obj.pencil_hardness_3 }}</td>
+            <td>{{ obj.pencil_hardness_sr }}</td>
+            <td>{{ obj.eriksen_1 }}</td>
+            <td>{{ obj.eriksen_2 }}</td>
+            <td>{{ obj.eriksen_3 }}</td>
+            <td>{{ obj.eriksen_sr }}</td>
+            <td>{{ obj.color_standart_1 }}</td>
+            <td>{{ obj.color_standart_2 }}</td>
+            <td>{{ obj.color_standart_3 }}</td>
+            <td>{{ obj.color_standart_sr }}</td>
+            <td>{{ obj.total_thickness }}</td>
+            <td>{{ obj.mass_finished }}</td>
+            <td>{{ obj.len_finished }}</td>
+            <td>{{ obj.name_of_assistant }}</td>
+            <td>{{ obj.comment }}</td>
         </tr>
     {% endfor %}
         </table>
