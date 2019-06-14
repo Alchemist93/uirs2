@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Steel Technology</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}'>
@@ -97,9 +97,9 @@
                                 <img src="{{ employee.passport.url }}" alt="" style="width: 250px; height:250px">
                                 <div class="caption">
                                     <h6 class="pull-right">{{ employee.birth_day }}</h6>
-                                    <h5><strong><a href="{{ product.get_absolute_url }}">{{ employee.surname}} {{ employee.name}}</a></strong>
+                                    <h5><strong><a href="{{ employee.get_absolute_url }}">{{ employee.surname}} {{ employee.name}}</a></strong>
                                     </h5>
-                                    <p>{{ employee.name }}</p>
+                                    <p>{{ employee.citizenship }}</p>
                                 </div>
                             </div>
                         </div>
