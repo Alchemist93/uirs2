@@ -10,29 +10,23 @@ from .filters import TestsFilter
 
 
 class LabTests(ListView):
-    """
-    Список всех доступных статей
-    """
-
-    # Нижеуказанные параметры можно также передать данному отображению через метод as_view()
-    # url(r'^$', Posts.as_view(context_object_name='posts', template_name='posts.html))
     model = LabTestsModel
-    # Под данным именем наш список статей будет доступен в шаблоне
     context_object_name = 'tests'
-    # Название шаблона
     template_name = 'lab/labtestsview.html'
-    # Количество объектов на 1 страницу
-    paginate_by = 10
+    paginate_by = 5
+
 
     def get_queryset(self):
         qs = LabTestsModel.objects.all().order_by('roll_number')
+        test_filtered_list = TestsFilter(self.request.GET, queryset=qs)
         #if not self.request.user.is_authenticated():
             #return qs.exclude(is_private=True)
-        return qs
+        return test_filtered_list.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filter'] = TestsFilter(self.request.GET, queryset=self.get_queryset())
+        print(context)
         return context
 
 

@@ -7,8 +7,6 @@ from dal import autocomplete
 
 
 class TestsFilter(django_filters.FilterSet):
-    #roll_number = django_filters.CharFilter(widget=autocomplete.ListSelect2(url='roll-auto'))
-
 
     class Meta:
         model = LabTests

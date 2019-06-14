@@ -96,6 +96,7 @@
         {{ filter.form}}
         <input type="submit" />
     </form>
+
     {% for obj in filter.qs %}
         {{ obj.roll_number }} - {{ obj.comment }}<br />
     {% endfor %}
@@ -165,7 +166,8 @@
             <td>Замер 2</td>
             <td>Замер 3</td>
         </tr>
-    {% for obj in filter.qs %}
+
+    {% for obj in tests %}
         <tr>
             <td>{{ obj.roll_number }}</td>
             <td>{{ obj.ral }}</td>
@@ -217,9 +219,50 @@
             <td>{{ obj.name_of_assistant }}</td>
             <td>{{ obj.comment }}</td>
         </tr>
-    {% endfor %}
-        </table>
 
+    {% endfor %}
+
+
+    {% if 'roll_number' in request.get_full_path %}
+   <li><a href="{{ request.get_full_path }}&page={{ i }}"{{ i }}></a></li>
+{% else %}
+   <li><a href="?page={{ i }}">{{ i }}</a></li>
+{% endif %}
+        </table>
+{% if 'roll_number' in request.get_full_path %}
+   <li><a href="{{ request.get_full_path }}&page={{ i }}"{{ i }}></a></li>
+{% else %}
+   <li><a href="?page={{ i }}">{{ i }}</a></li>
+{% endif %}
+
+
+{% block pagination %}
+    {% if is_paginated and 'roll_number' in request.get_full_path%}
+    <ul class="content-pagination-list">
+        {% if page_obj.has_previous and 'roll_number' in request.get_full_path %}
+            <li class="content-pagination-item content-pagination-prev">
+                <a class="content-pagination-link" href="{{ request.get_full_path }}&page={{ page_obj.previous_page_number }}">'Previous page'</a>
+            </li>
+        {% endif %}
+        {% for page in paginator.page_range %}
+            {% if page == page_obj.number and 'roll_number' in request.get_full_path %}
+                <li class="content-pagination-item">
+                    <span class="content-pagination-active">{{ page }}</span>
+                </li>
+            {% else %}
+                <li class="content-pagination-item">
+                    <a class="content-pagination-link" href="{{ request.get_full_path }}&page={{ page }}">{{ page }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next and 'roll_number' in request.get_full_path %}
+            <li class="content-pagination-item content-pagination-next">
+                <a class="content-pagination-link" href="{{ request.get_full_path }}&page={{ page_obj.next_page_number }}">'Next page'</a>
+            </li>
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endblock %}
 </div>
 
     </div>
@@ -244,7 +287,7 @@
     </div>
     {{ form.media }}
     <!-- /.container -->
-    <script type="text/javascript" src='{% static "js/mathem.js" %}'></script>
+
     <!-- jQuery -->
     <script src='{% static "js/jquery.js" %}'></script>
 
